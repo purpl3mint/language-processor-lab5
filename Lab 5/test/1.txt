@@ -1,0 +1,19 @@
+char c1=(char)999;
+123123
+zxcv
+int
+char
+float
+double
++
+-
+/
+*
+**
+(
+)
+=
+;
+
+int x = 7;
+char c=boo;

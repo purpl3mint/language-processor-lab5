@@ -9,9 +9,110 @@ namespace Lab_5
 {
     public class Commands
     {
-        private int checkExpression(string source)
+        private string checkExpression(string source)
         {
+            string result = "";
+            string keyword = "";
+            int status = 0;
             
+
+            for (int i = 0; i < source.Length; i++)
+            {
+                if ((status == 0 || status == 1) && char.IsDigit(source[i]))
+                {
+                    status = 1;
+                }
+                else if ((status == 0 || status == 11) && char.IsLetter(source[i]))
+                {
+                    status = 11;
+                    keyword += source[i];
+                }
+                else if (status == 11 && char.IsDigit(source[i]))
+                {
+                    status = 2;
+                    keyword = "";
+                }
+                else if (status == 2 && char.IsLetterOrDigit(source[i]))
+                {
+                    status = 2;
+                }
+                else if (status == 0 && source[i] == '+')
+                {
+                    result += " 3";
+                }
+                else if (status == 0 && source[i] == '-')
+                {
+                    result += " 4";
+                }
+                else if (status == 0 && source[i] == '/')
+                {
+                    result += " 5";
+                }
+                else if (status == 0 && source[i] == '*')
+                {
+                    status = 6;
+                }
+                else if (status == 6 && source[i] == '*')
+                {
+                    result += " 7";
+                    status = 0;
+                }
+                else if (status == 0 && source[i] == '(')
+                {
+                    result += " 8";
+                }
+                else if (status == 0 && source[i] == ')')
+                {
+                    result += " 9";
+                }
+                else if (status == 0 && source[i] == '=')
+                {
+                    result += " 10";
+                }
+                else if (status == 0 && source[i] == ';')
+                {
+                    result += " 15";
+                }
+                else if (source[i] == ' ' && status != 0)
+                {
+                    if (keyword == "int") status = 11;
+                    else if (keyword == "char") status = 12;
+                    else if (keyword == "float") status = 13;
+                    else if (keyword == "double") status = 14;
+                    else if (status == 11) status = 2;
+
+                    keyword = "";
+                    result += " " + status;
+                    status = 0;
+                }
+                else if (status != 0)
+                {
+                    if (keyword == "int") status = 11;
+                    else if (keyword == "char") status = 12;
+                    else if (keyword == "float") status = 13;
+                    else if (keyword == "double") status = 14;
+                    else if (status == 11) status = 2;
+
+                    keyword = "";
+                    result += " " + status;
+                    status = 0;
+                    i -= 1;
+                }
+            }
+
+
+
+            if (keyword == "int") status = 11;
+            else if (keyword == "char") status = 12;
+            else if (keyword == "float") status = 13;
+            else if (keyword == "double") status = 14;
+            else if (status == 11) status = 2;
+
+            if (status != 0)
+                result += " " + status;
+
+            return result;
+            /*
             int state = 1;
             int position = 1;
 
@@ -85,6 +186,7 @@ namespace Lab_5
             }
 
             return position;
+            */
         }
 
         public void CommandCreate()
@@ -225,6 +327,10 @@ namespace Lab_5
 
             for (int i = 0; i < strings.Length; i++)
             {
+                string lineResult = checkExpression(strings[i]);
+
+                StaticData.mainForm.ResultsTextBox.Text += "Line " + (i + 1) + ": " + lineResult + Environment.NewLine;
+                /*
                 int lineStatus = checkExpression(strings[i]);
                 if (lineStatus == -1)
                 {
@@ -238,6 +344,7 @@ namespace Lab_5
                 {
                     StaticData.mainForm.ResultsTextBox.Text += "Line " + (i + 1) + ": SYNTAX ERROR, wrong command at position " + lineStatus + Environment.NewLine;
                 }
+                */
             }
 
         }
