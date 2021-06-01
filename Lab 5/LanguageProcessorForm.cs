@@ -203,6 +203,25 @@ namespace Lab_5
             StaticData.commands.CommandCheck();
         }
 
+        private void taskToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(null, "../../task/task5.html");
+        }
+
+        private void grammarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(null, "../../task/grammar.html");
+        }
+
+        private void stateDiagramToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(null, "../../task/states.html");
+        }
+
+        private void exampleToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(null, "../../task/examples.html");
+        }
     }
 
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №5 - Грамматика</title>
+</head>
+<body>
+    
+    <h1>Лабораторная работа №5 - Грамматика</h1>
+
+    <nav>
+        <ul>
+            <li><a href="task5.html">Постановка задачи</a></li>
+            <li><a href="grammar.html">Грамматика</a></li>
+            <li><a href="states.html">Диаграмма состояний</a></li>
+            <li><a href="example.html">Тестовый пример</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <p>Грамматика G[&lt;AB&gt;] для решения данной задачи будет выглядеть следующим образом:<br><br>
+            &lt;AB&gt;&rarr;T|&lt;AB&gt;+T|&lt;AB&gt;-T<br>
+            T&rarr;O|O*T|O/T<br>
+            O&rarr;(&lt;AB&gt;)|&lt;идентификатор&gt;|&lt;ЦБЗ&gt;<br>
+            &lt;идентификатор&gt;&rarr;Б{Б|Ц}<br>
+            &lt;ЦБЗ&gt;&rarr;Ц{Ц}<br><br>
+        </p>
+        <p>
+            Здесь введены следующие обозначения:<br><br>
+            Т - терм<br>
+            О - операнд<br>
+            &lt;ЦБЗ&gt; - целое без знака<br>
+            Б - буква латинского алфавита<br>
+            Ц - цифра
+        </p>
+    </div>
+</body>
+</html>

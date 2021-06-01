@@ -78,6 +78,11 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.StatusStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.лексическийАнализаторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taskToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.grammarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stateDiagramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exampleToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -94,7 +99,8 @@
             this.StripMenuEdit,
             this.текстToolStripMenuItem,
             this.пускToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.справкаToolStripMenuItem,
+            this.лексическийАнализаторToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -314,14 +320,14 @@
             this.StripMenuHelp.Name = "StripMenuHelp";
             this.StripMenuHelp.ShortcutKeyDisplayString = "F1";
             this.StripMenuHelp.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.StripMenuHelp.Size = new System.Drawing.Size(175, 22);
+            this.StripMenuHelp.Size = new System.Drawing.Size(180, 22);
             this.StripMenuHelp.Text = "Вызов справки";
             this.StripMenuHelp.Click += new System.EventHandler(this.StripMenuHelp_Click);
             // 
             // StripMenuAbout
             // 
             this.StripMenuAbout.Name = "StripMenuAbout";
-            this.StripMenuAbout.Size = new System.Drawing.Size(175, 22);
+            this.StripMenuAbout.Size = new System.Drawing.Size(180, 22);
             this.StripMenuAbout.Text = "О программе";
             this.StripMenuAbout.Click += new System.EventHandler(this.StripMenuAbout_Click);
             // 
@@ -543,6 +549,45 @@
             this.splitContainer1.SplitterDistance = 184;
             this.splitContainer1.TabIndex = 5;
             // 
+            // лексическийАнализаторToolStripMenuItem
+            // 
+            this.лексическийАнализаторToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.taskToolStripMenuItem1,
+            this.grammarToolStripMenuItem1,
+            this.stateDiagramToolStripMenuItem1,
+            this.exampleToolStripMenuItem2});
+            this.лексическийАнализаторToolStripMenuItem.Name = "лексическийАнализаторToolStripMenuItem";
+            this.лексическийАнализаторToolStripMenuItem.Size = new System.Drawing.Size(157, 20);
+            this.лексическийАнализаторToolStripMenuItem.Text = "Лексический анализатор";
+            // 
+            // taskToolStripMenuItem1
+            // 
+            this.taskToolStripMenuItem1.Name = "taskToolStripMenuItem1";
+            this.taskToolStripMenuItem1.Size = new System.Drawing.Size(198, 22);
+            this.taskToolStripMenuItem1.Text = "Постановка задачи";
+            this.taskToolStripMenuItem1.Click += new System.EventHandler(this.taskToolStripMenuItem1_Click);
+            // 
+            // grammarToolStripMenuItem1
+            // 
+            this.grammarToolStripMenuItem1.Name = "grammarToolStripMenuItem1";
+            this.grammarToolStripMenuItem1.Size = new System.Drawing.Size(198, 22);
+            this.grammarToolStripMenuItem1.Text = "Грамматика";
+            this.grammarToolStripMenuItem1.Click += new System.EventHandler(this.grammarToolStripMenuItem1_Click);
+            // 
+            // stateDiagramToolStripMenuItem1
+            // 
+            this.stateDiagramToolStripMenuItem1.Name = "stateDiagramToolStripMenuItem1";
+            this.stateDiagramToolStripMenuItem1.Size = new System.Drawing.Size(198, 22);
+            this.stateDiagramToolStripMenuItem1.Text = "Диаграмма состояний";
+            this.stateDiagramToolStripMenuItem1.Click += new System.EventHandler(this.stateDiagramToolStripMenuItem1_Click);
+            // 
+            // exampleToolStripMenuItem2
+            // 
+            this.exampleToolStripMenuItem2.Name = "exampleToolStripMenuItem2";
+            this.exampleToolStripMenuItem2.Size = new System.Drawing.Size(198, 22);
+            this.exampleToolStripMenuItem2.Text = "Тестовый пример";
+            this.exampleToolStripMenuItem2.Click += new System.EventHandler(this.exampleToolStripMenuItem2_Click);
+            // 
             // LanguageProcessorForm
             // 
             this.AllowDrop = true;
@@ -625,6 +670,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripLabel StatusStripLabel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ToolStripMenuItem лексическийАнализаторToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem taskToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem grammarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem stateDiagramToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exampleToolStripMenuItem2;
     }
 }
 

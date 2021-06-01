@@ -1,0 +1,3 @@
+int x = 27;
+char ch = (char)x;
+float double int
